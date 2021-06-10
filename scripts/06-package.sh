@@ -15,7 +15,7 @@ if [[ ! ${OS} || ! ${GITHUB_WORKSPACE} || ! ${GITHUB_BASE_REF} ]]; then
 fi
 
 cd ${GITHUB_WORKSPACE}
-PKGVERSION=`grep "PACKAGE_VERSION" src/config/raven-config.h | cut -d\" -f2`
+PKGVERSION=`grep "PACKAGE_VERSION" src/config/bitcoin-config.h | cut -d\" -f2`
 VERSION="${PKGVERSION}"
 SHORTHASH=`git rev-parse --short HEAD`
 RELEASE_LOCATION="${GITHUB_WORKSPACE}/release"
