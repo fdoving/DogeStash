@@ -34,9 +34,9 @@ echo "GITHUB_BASE_REF: ${GITHUB_BASE_REF}"
 echo "----------------------------------------"
 
 if [[ ${GITHUB_BASE_REF} =~ "release" ]]; then
-    DISTNAME="raven-${VERSION}"
+    DISTNAME="dogecoin-${VERSION}"
 else
-    DISTNAME="raven-${VERSION}-${SHORTHASH}"
+    DISTNAME="dogecoin-${VERSION}-${SHORTHASH}"
 fi
 
 echo "----------------------------------------"
