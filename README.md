@@ -1,7 +1,7 @@
 # DogeStash
 Stash for Dogecoin-stuff.
 
-## build-from-git.sh
+## bfg-fdov.sh
 Quick hack to install depends, checkout a branch and build Dogecoin.
 
 Can build linux, arm32v7, windows and osx. (if you get the SDK and put it in /tmp/SDKs/ as the only tar.gz file)
