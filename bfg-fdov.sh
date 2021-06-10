@@ -16,8 +16,8 @@
 # BASEREF should be set to release for releases, does not matter what else it is when it's not releases.
 
 BASEREF=dev
-RELEASEDIR=/root/release/
-PREF=/build/
+RELEASEDIR=/root/dogerelease/
+PREF=/dogebuild/
 GITDIR=dogecoin
 GITURL=https://github.com/fdoving/dogecoin
 GITBRANCH=$2
