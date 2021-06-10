@@ -56,7 +56,7 @@ build () {
     $SCRIPTDIR/00-install-deps.sh $BUILDFOR
     # build or copy depends. Increase number of threads -j2 with -jTHREADS
     echo "Setting threads to $THREADS in 02-copy-build*...."
-    sed -i.old 's/\-j2/\-j'$THREADS'/g' $SCRIPTDIR/scripts/02-copy-build-dependencies.sh
+    sed -i.old 's/\-j2/\-j'$THREADS'/g' $SCRIPTDIR/02-copy-build-dependencies.sh
     $SCRIPTDIR/02-copy-build-dependencies.sh $BUILDFOR $WORKDIR
     echo "Reverting threads in 02-copy-build*...."
     cp $SCRIPTDIR/02-copy-build-dependencies.sh.old \
