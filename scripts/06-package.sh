@@ -103,8 +103,8 @@ elif [[ ${OS} == "osx" ]]; then
 
     make deploydir
 
-    if [[ -e ${GITHUB_WORKSPACE}/dist/Raven-Qt.app/Contents/MacOS/install_cli.sh ]]; then
-        chmod +x ${GITHUB_WORKSPACE}/dist/Raven-Qt.app/Contents/MacOS/install_cli.sh
+    if [[ -e ${GITHUB_WORKSPACE}/dist/Dogecoin-Qt.app/Contents/MacOS/install_cli.sh ]]; then
+        chmod +x ${GITHUB_WORKSPACE}/dist/Dogecoin-Qt.app/Contents/MacOS/install_cli.sh
     fi
 
     mkdir -p unsigned-app-${DISTNAME}
@@ -123,7 +123,7 @@ elif [[ ${OS} == "osx" ]]; then
 
     make deploy
 
-    ${GITHUB_WORKSPACE}/depends/x86_64-apple-darwin14/native/bin/dmg dmg "Raven-Core.dmg" ${RELEASE_LOCATION}/${DISTNAME}-osx-unsigned.dmg
+    ${GITHUB_WORKSPACE}/depends/x86_64-apple-darwin14/native/bin/dmg dmg "Dogecoin-Core.dmg" ${RELEASE_LOCATION}/${DISTNAME}-osx-unsigned.dmg
 
     cd ${STAGE_DIR}
     find . -name "lib*.la" -delete
@@ -208,8 +208,10 @@ elif [[ ${OS} == "arm32v7" || ${OS} == "arm32v7-disable-wallet" ]]; then
             exit 1
         fi
         cd ${STAGE_DIR}
-        cp -Rf ${DISTNAME}/bin/ravend .
-        cp -Rf ${DISTNAME}/bin/raven-cli .
+        cp -Rf ${DISTNAME}/bin/dogecoind .
+        cp -Rf ${DISTNAME}/bin/dogecoin-cli .
+        cp -Rf ${DISTNAME}/bin/dogecoin-wallet .
+        cp -Rf ${DISTNAME}/bin/dogecoin-tx .
     else
         echo "release directory doesn't exist"
     fi
@@ -244,8 +246,11 @@ elif [[ ${OS} == "aarch64" || ${OS} == "aarch64-disable-wallet" ]]; then
             exit 1
         fi
         cd ${STAGE_DIR}
-        cp -Rf ${DISTNAME}/bin/ravend .
-        cp -Rf ${DISTNAME}/bin/raven-cli .
+        cp -Rf ${DISTNAME}/bin/dogecoind .
+        cp -Rf ${DISTNAME}/bin/dogecoin-cli .
+        cp -Rf ${DISTNAME}/bin/dogecoin-wallet .
+        cp -Rf ${DISTNAME}/bin/dogecoin-tx .
+        
     else
         echo "release directory doesn't exist"
     fi
